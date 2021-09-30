@@ -1,3 +1,4 @@
+@import "base/function";
 @import "base/fonts";
 @import "base/animation";
 @import "abstracts/mixins";
@@ -11,6 +12,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/banner";
+@import "components/banner-products";
 
 @import "pages/home";
 

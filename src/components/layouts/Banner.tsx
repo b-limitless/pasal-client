@@ -1,8 +1,7 @@
 import React from 'react'
 import banner from 'assets/img/promotion.png';
-interface BannerProps {
-}
-const Banner: React.FC<BannerProps> = ({ }) => {
+
+const Banner: React.FC<{}> = () => {
     return (<div className="banner">
         <img src={banner} alt="" className="banner__img" />
         <h1 className="banner__h2">
