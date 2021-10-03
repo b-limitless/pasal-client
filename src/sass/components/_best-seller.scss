@@ -1,0 +1,68 @@
+.bestseller {
+  max-width: 82.1875rem;
+  margin-top: 2rem;
+  transform: translateY(-9.185rem);
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    /* identical to box height */
+    color: #22262a;
+    text-align: center;
+  }
+
+  &__ul {
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+
+      .selected {
+        color: #33a0ff;
+        border-bottom: 2px solid #33a0ff;
+      }
+
+      .item {
+        font-family: "Montserrat", sans-serif;
+        font-size: pxToRem(22);
+        line-height: pxToRem(33);
+        padding: 0.8rem 1.6rem;
+        cursor: pointer;
+
+        &:active {
+          color: #33a0ff;
+          border-bottom: 2px solid #33a0ff;
+        }
+      }
+    }
+  }
+  &__tabcontent {
+      position: relative;
+      min-height: 5rem;
+      background-color: skyblue;
+      
+      .tab__item {
+          position: absolute;
+          transition:visibility 0.3s linear,opacity 0.3s linear;
+      }
+
+      .hide {
+        visibility: none;
+        opacity: 0;
+      }
+
+      .show {
+          visibility: visible;
+          opacity: 1;
+      } 
+  }
+  &__loadmore {
+  }
+}
+
+.bs-active-li {
+  color: #33a0ff;
+  border-bottom: 2px solid #33a0ff;
+}

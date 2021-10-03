@@ -2,6 +2,7 @@ import React from 'react'
 import Header from 'components/layouts/Header';
 import Banner from 'components/layouts/Banner';
 import BannerProducts from 'components/layouts/BannerProducts';
+import BestSeller from 'components/layouts/BestSeller';
 
 interface HomeProps {
 
@@ -14,6 +15,7 @@ const Home: React.FC<HomeProps> = ({ }) => {
                         <Header />
                         <Banner />
                         <BannerProducts/>
+                        <BestSeller/>
                  </div>);
 }
 
