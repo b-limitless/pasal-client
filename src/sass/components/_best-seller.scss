@@ -1,14 +1,18 @@
 .bestseller {
   max-width: 82.1875rem;
-  margin-top: 2rem;
-  transform: translateY(-9.185rem);
+  margin-top: 4rem;
+  //transform: translateY(-9.185rem);
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    //transform: translateY(0);
+  }
 
   &__title {
     font-style: normal;
     font-weight: 600;
-    font-size: 35px;
-    line-height: 52px;
-    /* identical to box height */
+    font-size: pxToRem(35);
+    line-height: pxToRem(52);
     color: #22262a;
     text-align: center;
   }
@@ -18,6 +22,7 @@
       display: flex;
       list-style: none;
       justify-content: center;
+      margin-top: 1rem;
 
       .selected {
         color: #33a0ff;
@@ -39,26 +44,45 @@
     }
   }
   &__tabcontent {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    min-height: 53.625rem;
+
+    .tab__item {
+      width: 100%;
       position: relative;
-      min-height: 5rem;
-      background-color: skyblue;
-      
-      .tab__item {
-          position: absolute;
-          transition:visibility 0.3s linear,opacity 0.3s linear;
-      }
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+    }
 
-      .hide {
-        visibility: none;
-        opacity: 0;
-      }
+    .hide {
+      height: 0px;
+      visibility: hidden;
+      opacity: 0;
+    }
 
-      .show {
-          visibility: visible;
-          opacity: 1;
-      } 
+    .show {
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
   }
   &__loadmore {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: pxToRem(20);
+      line-height: pxToRem(30);
+      color: #33a0ff;
+      cursor: pointer;
+      border-bottom: 1px solid currentColor;
+     
+    }
   }
 }
 

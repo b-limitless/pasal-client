@@ -1,0 +1,117 @@
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-gap: 1rem;
+
+  &__item {
+    border-radius: 5px;
+    border: 3px solid #f6f7f8;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__row {
+      position: relative;
+      .title {
+        font-weight: bold;
+        font-size: pxToRem(18);
+        line-height: 150%;
+        letter-spacing: 0.5px;
+        color: #223263;
+        text-align: center;
+      }
+
+      .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ff4858;
+        font-size: pxToRem(18);
+        padding: 0.5rem 1rem;
+        line-height: 22px;
+        color: #ffffff;
+        border-radius: 5px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .star {
+        cursor: pointer;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+
+        width: 20px;
+        height: 20px;
+      }
+      .enabled {
+        background: #ffc600;
+      }
+      .disabled {
+        background: #c1c8ce;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: .5rem;
+
+      &--original {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 180%;
+        /* or 32px */
+
+        letter-spacing: 0.5px;
+
+        /* Primary/Blue */
+
+        color: #40bfff;
+      }
+      &--old {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: 0.5px;
+        text-decoration-line: line-through;
+
+        /* Neutral/Grey */
+
+        color: #9098b1;
+      }
+      &--discound {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 150%;
+        /* identical to box height, or 21px */
+
+        letter-spacing: 0.5px;
+
+        /* Primary/Red */
+
+        color: #fb7181;
+      }
+    }
+  }
+}

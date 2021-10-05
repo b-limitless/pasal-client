@@ -1,10 +1,12 @@
 .bannerProducts {
   max-width: 78.3rem;
   margin: 0 auto;
-  transform: translateY(-11.185rem);
+  //transform: translateY(-11.185rem);
+  margin-top: -11.185rem;
 
-  @media only screen and (max-width: $bp-small) {
-    transform: translateY(0rem);
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 0;
+    //transform: translateY(0rem);
 }
   .products {
     display: grid;
