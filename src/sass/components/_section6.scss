@@ -1,0 +1,37 @@
+.section6 {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(pxToRem(165), 1fr));
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+
+    .item__icon {
+      padding: 1rem 0;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: pxToRem(27);
+      line-height: pxToRem(40);
+      color: #22262a;
+    }
+    .description {
+      max-width: pxToRem(197.56);
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(18);
+      line-height: pxToRem(22);
+      text-align: center;
+      color: #22262a;
+    }
+  }
+}
