@@ -1,0 +1,54 @@
+.section8 {
+  margin-top: 7.5625rem;
+
+  .grid {
+    max-width: pxToRem(1345.13);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(pxToRem(376), 1fr));
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        .stars {
+          justify-content: flex-start !important;
+        }
+        img {
+          width: 100%;
+        }
+        .price {
+            justify-content: flex-start !important;
+        }
+        &__title {
+          font-style: normal;
+          font-weight: normal;
+          font-size: pxToRem(22);
+          line-height: pxToRem(27);
+
+          color: #262626;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: pxToRem(34);
+    line-height: pxToRem(51);
+    /* identical to box height */
+    text-align: center;
+
+    color: #22262a;
+  }
+}
