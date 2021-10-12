@@ -1,9 +1,13 @@
 import React from 'react'
 import Shoe from 'assets/svg/shoe.svg';
 
-const Section5: React.FC<{}> = ({children}) => {
+interface Section5Props {
+    marginTop?: string;
+}
+
+const Section5: React.FC<Section5Props> = ({marginTop, children}) => {
         return (
-            <section className="section5">
+            <section className={`section5 ${marginTop}`}>
                 
                 <div className="section5__item item-1">
                     <div className="title  title1">Adidas Men Running

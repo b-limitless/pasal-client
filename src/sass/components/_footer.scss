@@ -1,6 +1,10 @@
 .footer {
   margin: 7rem 0;
   background-color: #1e2833;
+  @media only screen and (max-width: $bp-small) {
+    padding: 1rem;
+  
+  }
   &__container {
     max-width: pxToRem(1068.93);
     margin: auto;
@@ -49,6 +53,11 @@
     grid-template-columns: repeat(auto-fit, minmax(pxToRem(106), 1fr));
     color: #ffffff;
     grid-gap: 1rem;
+    @media only screen and (max-width: $bp-small) {
+      display: block;
+    
+    }
+
 
     .newsletter {
       grid-column: 2 / 4;

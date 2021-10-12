@@ -1,9 +1,11 @@
+.default-margin-top {
+  margin-top: 4rem;
+}
 .section5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 1rem;
   background-color: #40bfff;
-  margin-top: 4rem;
   .item-1 {
     max-width: pxToRem(592);
     margin: auto;

@@ -21,8 +21,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                         <Banner />
                         <BannerProducts/>
                         <BestSeller/>
-                       
-                        <Section5/>
+                        <Section5 marginTop = "default-margin-top"/>
                         <Section6/>
                         <Section7/>
                         <Section8/>
