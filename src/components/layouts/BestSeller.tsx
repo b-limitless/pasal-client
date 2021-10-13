@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import BestSellerGrid from 'components/layouts/childrens/BestSellerGrid';
+
 interface TabInterface {
     id: number;
     title: string;
     content: JSX.Element
 }
 const tabs: TabInterface[] = [
-    { id: 1, title: 'All', content: <BestSellerGrid />, },
+    { id: 1, title: 'All', content: <BestSellerGrid view = "grid"/>, },
     { id: 2, title: 'Shoe', content: <div>Tab Content 2</div> },
     { id: 3, title: 'Snikers', content: <div>Tab Content 3</div> },
     { id: 4, title: 'Belt', content: <div>Tab Content 4</div> },
-    { id: 5, title: 'Sunglass', content: <BestSellerGrid /> },
+    { id: 5, title: 'Sunglass', content: <BestSellerGrid view = "grid"/> },
 ];
 
 const BestSeller: React.FC<{}> = ({ children }) => {

@@ -19,14 +19,12 @@ export const HotDeal: React.FC<HotDealProps> = ({ }) => {
 
     const [page, setPage] = React.useState(1);
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-      setPage(value);
+        setPage(value);
     };
 
     const viewTypeFun = (e: React.MouseEvent<HTMLInputElement>) => {
         let button = e.target as HTMLInputElement;
     }
-    console.log(page, viewType)
-  
 
     return (<div className="container">
         <Header />
@@ -94,22 +92,22 @@ export const HotDeal: React.FC<HotDealProps> = ({ }) => {
                         <div className="item item-4">Show</div>
                         <div className="item item-5">12</div>
                         <div className="item item-6">&#8679;</div>
-                        <div className="item item-7" onClick = {() => setViewType('grid')}>
-                        <GridSVG fill = "#40BFFF"/>
+                        <div className="item item-7" onClick={() => setViewType('grid')}>
+                            <GridSVG fill= {viewType === "grid" ? "#40BFFF" : "#C1C8CE"} />
                         </div>
-                        <div className="item item-8" onClick = {() => setViewType('list')}>
-                           <ListSVG fill = "#C1C8CE"/>
+                        <div className="item item-8" onClick={() => setViewType('list')}>
+                            <ListSVG fill= {viewType === "list" ? "#40BFFF" : "#C1C8CE"} />
                         </div>
 
 
                     </div>
                     <div className="row">
-                    <BestSellerGrid />
+                        <BestSellerGrid view={viewType} />
                     </div>
                     <div className="row pagination">
-                    <Pagination  style = {{
-                       fontFamily: "Montserrat !important"
-                    }}count={10} shape="rounded" onChange = {handleChange}/>
+                        <Pagination style={{
+                            fontFamily: "Montserrat !important"
+                        }} count={10} shape="rounded" onChange={handleChange} />
                     </div>
                 </div>
             </div>
