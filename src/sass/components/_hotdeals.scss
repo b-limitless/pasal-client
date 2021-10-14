@@ -1,5 +1,5 @@
 .hotdeals {
-  margin-top: $default-medium-mt;
+  margin-top:$default-medium-mt;
 
   &__bedcrumber {
     background-color: #f6f7f8;
@@ -34,6 +34,10 @@
     grid-template-columns: minmax(pxToRem(270), max-content) 1fr;
     margin-top: $default-medium-mt;
     grid-gap: 2rem;
+
+    @media only screen and (max-width: $bp-700) {
+      grid-template-columns:1fr;
+    }
 
     .left {
       display: flex;
@@ -171,4 +175,11 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: $bp-700) {
+  .MuiBox-root {
+    width: 100% !important;
+  }
+ 
 }

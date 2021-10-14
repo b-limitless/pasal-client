@@ -7,7 +7,8 @@
   grid-gap: 1rem;
   background-color: #40bfff;
   .item-1 {
-    max-width: pxToRem(592);
+    //max-width: pxToRem(592);
+    max-width: pxToRem(350);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -21,18 +22,28 @@
       font-weight: normal;
     }
     .title1 {
-      font-size: pxToRem(55);
-      line-height: pxToRem(82);
+
+      // font-size: pxToRem(55);
+      // line-height: pxToRem(82);
+      font-weight: 600;
+      font-size: pxToRem(30);
+      line-height: pxToRem(45);
+      
     }
     .title2 {
-      font-size: pxToRem(24);
-      line-height: pxToRem(36);
+      // font-size: pxToRem(24);
+      // line-height: pxToRem(36);
+      
+      font-size: pxToRem(14);
+      line-height: pxToRem(21);
     }
     .title3 {
       position: relative;
       font-weight: 600;
+
       font-size: pxToRem(20);
       line-height: pxToRem(30);
+      
       display: flex;
       border-bottom: 2px solid currentColor;
     }

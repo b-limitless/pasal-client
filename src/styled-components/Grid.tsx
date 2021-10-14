@@ -33,6 +33,7 @@ const Grid = styled.div<GridProps>`
             justify-content: flex-start;
             column-gap: 1rem;
                 .col {
+                  justify-content: space-evenly;
                     display: flex;
                     flex-direction: column;
                     row-gap: 1rem;
@@ -85,8 +86,17 @@ const Grid = styled.div<GridProps>`
             `}
       }
       .action {
+
+        ${props =>
+          props.view === "grid" && `
+          display:none;
+        `}
+        ${props =>
+          props.view === "list" && `
+          display: flex;
+        `}
         
-        display: flex;
+     
         column-gap: 1rem;
         button {
           font-size: 14px;

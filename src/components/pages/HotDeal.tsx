@@ -83,7 +83,7 @@ export const HotDeal: React.FC<HotDealProps> = ({ }) => {
                 </div>
                 <div className="right">
                     <div className="row section__5">
-                        <Section5 />
+                        <Section5 variant = "HotDeals"/>
                     </div>
                     <div className="row sort">
                         <div className="item item-1">11 Items</div>

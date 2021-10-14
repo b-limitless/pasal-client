@@ -4,6 +4,7 @@ import Grid from 'styled-components/Grid';
 import { viewType } from 'types'; 
 import Cart2 from 'assets/svg/cart_2.svg';
 import Heart from 'assets/svg/hearts.svg';
+import ProductImage from 'assets/img/Product1.png';
 
 interface BestSellerGridProps {
     view: viewType
@@ -56,6 +57,7 @@ const BestSellerGrid: React.FC<BestSellerGridProps> = ({ view }) => {
                         </button>
                     </div>
                 </div>
+            
             </div>
 
         </div>
