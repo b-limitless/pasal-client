@@ -78,23 +78,7 @@
           font-size: pxToRem(18);
           line-height: pxToRem(22);
         }
-        .colors {
-          display: flex;
-          justify-content: space-between;
-
-          .color {
-            padding: 0.1em;
-            border-radius: 50%;
-            width: pxToRem(20);
-            height: pxToRem(20);
-            cursor: pointer;
-          }
-
-          .selected {
-            border: 1px solid currentColor;
-            transform: scale(120%);
-          }
-        }
+        
       }
     }
 
@@ -174,6 +158,26 @@
         font-family: "Montserrat", sans-serif;
       }
     }
+  }
+}
+
+.colors {
+ 
+  display: flex;
+  justify-content: space-between;
+  
+
+  .color {
+    padding: 0.1em;
+    border-radius: 50%;
+    width: pxToRem(20);
+    height: pxToRem(20);
+    cursor: pointer;
+  }
+
+  .selected {
+    border: 1px solid currentColor;
+    transform: scale(120%);
   }
 }
 

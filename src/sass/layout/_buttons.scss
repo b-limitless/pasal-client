@@ -1,0 +1,37 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+
+  &--primary,
+  &--secondary {
+    padding: 1rem 1.5rem;
+    color: #33a0ff;
+  }
+
+  &--primary {
+    border-radius: 5px;
+    background: rgba(51, 160, 255, 0.1);
+    font-size: pxToRem(14);
+  }
+
+  &--secondary {
+    background-color: #f6f7f8;
+  }
+  &--facebook,
+  &--twitter {
+    padding: 1rem 2rem;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: pxToRem(24);
+  }
+
+  &--facebook {
+    background-color: #385c8e;
+  }
+
+  &--twitter {
+    background-color: #33a0ff;
+  }
+}

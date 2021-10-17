@@ -9,6 +9,8 @@
 @import "base/typography";
 
 
+@import "layout/buttons";
+@import "layout/form";
 @import "components/header";
 @import "components/footer";
 @import "components/banner";
@@ -20,11 +22,12 @@
 @import "components/section8";
 @import "components/section9";
 @import "components/hotdeals";
+@import "components/product-details";
 @import "pages/home";
-
-
 
 
 @import "layout/grid";
 @import "layout/navigation";
+
+
 // @import "layout/navigation1";
