@@ -83,7 +83,7 @@ export const HotDeal: React.FC<HotDealProps> = ({ }) => {
                 </div>
                 <div className="right">
                     <div className="row section__5">
-                        <Section5 variant = "HotDeals"/>
+                        <Section5 variant="HotDeals" />
                     </div>
                     <div className="row sort">
                         <div className="item item-1">11 Items</div>
@@ -93,16 +93,16 @@ export const HotDeal: React.FC<HotDealProps> = ({ }) => {
                         <div className="item item-5">12</div>
                         <div className="item item-6">&#8679;</div>
                         <div className="item item-7" onClick={() => setViewType('grid')}>
-                            <GridSVG fill= {viewType === "grid" ? "#40BFFF" : "#C1C8CE"} />
+                            <GridSVG fill={viewType === "grid" ? "#40BFFF" : "#C1C8CE"} />
                         </div>
                         <div className="item item-8" onClick={() => setViewType('list')}>
-                            <ListSVG fill= {viewType === "list" ? "#40BFFF" : "#C1C8CE"} />
+                            <ListSVG fill={viewType === "list" ? "#40BFFF" : "#C1C8CE"} />
                         </div>
 
 
                     </div>
                     <div className="row">
-                        <BestSellerGrid view={viewType} />
+                        <BestSellerGrid view={viewType} type="home" />
                     </div>
                     <div className="row pagination">
                         <Pagination style={{

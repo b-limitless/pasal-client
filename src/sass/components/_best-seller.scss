@@ -47,7 +47,7 @@
     position: relative;
     width: 100%;
     margin-top: 2rem;
-    min-height: 53.625rem;
+    min-height: pxToRem(254);
 
     .tab__item {
       width: 100%;

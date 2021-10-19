@@ -10,6 +10,26 @@ import Heart from 'assets/svg/hearts.svg';
 import Grid from 'styled-components/Grid';
 import FacebookPNG from 'assets/img/facebook.png';
 import TwitterIPNG from 'assets/img/twitter.png';
+import BestSeller from 'components/layouts/BestSeller';
+import BestSellerGrid from 'components/layouts/childrens/BestSellerGrid';
+
+import { TabInterface } from 'interfaces';
+
+const tabs: TabInterface[] = [
+    {
+        id: 1, title: 'Product Information', content: <div><p>
+            air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.
+        </p>
+            <p>
+                air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.
+            </p>
+            <p>
+            </p>
+            <p>air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.</p></div>,
+    },
+    { id: 2, title: 'Reviews', content: <div><p>Tab Content 2</p></div> },
+    { id: 3, title: 'Another Tab', content: <div><p>Tab Content 3</p></div> },
+];
 
 interface ProductDetailsProps {
 
@@ -19,7 +39,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
     return (
         <div className="container">
             <Header />
-            <div className="main">
+            <div className="main main__p__details">
                 <div className="hotdeals__bedcrumber">
                     <span>Home</span>
                     <span>/</span>
@@ -27,7 +47,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
                 </div>
 
                 <div className="col__container">
-                    <div className="col">
+                    <div className="col product__details">
                         <div className="details">
                             <div className="catlog">
                                 <div className="row product__image">
@@ -46,17 +66,17 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
                                 </div>
 
                                 <div className="row reviews">
-                                <div className="stars">
-                                    <div className="star enabled"> </div>
-                                    <div className="star enabled"></div>
-                                    <div className="star enabled"></div>
-                                    <div className="star enabled"></div>
-                                    <div className="star disabled"></div>
+                                    <div className="stars">
+                                        <div className="star enabled"> </div>
+                                        <div className="star enabled"></div>
+                                        <div className="star enabled"></div>
+                                        <div className="star enabled"></div>
+                                        <div className="star disabled"></div>
+                                    </div>
+                                    <div className="review">0 Review</div>
+                                    <div className="submit">Submit a review</div>
                                 </div>
-                                <div className="review">0 Review</div>
-                                <div className="submit">Submit a review</div>
-                                </div>
-                                
+
                                 <div className="row price">
                                     <div className="price--original">$299.43</div>
                                     <div className="price--old">$999.45</div>
@@ -88,7 +108,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
 
                                 <div className="row size">
                                     <div className="title"> Size</div>
-                                    <select name="size" className = "select">
+                                    <select name="size" className="select">
                                         <option value="XS">XS</option>
                                         <option value="S">S</option>
                                     </select>
@@ -96,9 +116,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
 
                                 <div className="row action">
                                     <div className="qty">
-                                        <button className = "btn btn--secondary">-</button>
-                                        <button className = "btn btn--secondary number">1</button>
-                                        <button className = "btn btn--secondary">+</button>
+                                        <button className="btn btn--secondary">-</button>
+                                        <button className="btn btn--secondary number">1</button>
+                                        <button className="btn btn--secondary">+</button>
                                     </div>
                                     <div className="cart">
                                         <button className="btn btn--primary addtocart">
@@ -112,13 +132,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
 
                                 <div className="socials">
                                     <div className="item">
-                                        <button className = "btn btn--facebook">
-                                            <img src= {FacebookPNG} alt="Share on Facebook" />
+                                        <button className="btn btn--facebook">
+                                            <img src={FacebookPNG} alt="Share on Facebook" />
                                             <span> Share on Facebook</span>
                                         </button>
 
-                                        <button className = "btn btn--twitter">
-                                            <img src= {TwitterIPNG} alt="Share on Twitter" />
+                                        <button className="btn btn--twitter">
+                                            <img src={TwitterIPNG} alt="Share on Twitter" />
                                             <span> Share on Twitter</span>
                                         </button>
                                     </div>
@@ -128,7 +148,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
                         </div>
 
                         <div className="tabs">
-                            This is tabs
+                            <BestSeller tabs={tabs} />
                         </div>
                     </div>
 
@@ -187,7 +207,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ }) => {
                     </div>
 
                 </div>
-
+                
+                <div className="realated">
+                    <div className="realated__title">RELATED PRODUCTS</div>
+                    <div className="grid">
+                    <BestSellerGrid view = "grid"/>
+                    </div>
+                </div>
             </div>
             <Footer />
         </div>);
