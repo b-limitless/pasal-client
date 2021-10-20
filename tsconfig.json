@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseURI": "./src",
     "experimentalDecorators": true,
     "baseUrl": "./src",
     "target": "es5",

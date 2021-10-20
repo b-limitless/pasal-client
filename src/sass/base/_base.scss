@@ -39,3 +39,14 @@ body {
 
 a {
 }
+
+input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
