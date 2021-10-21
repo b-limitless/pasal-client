@@ -4,12 +4,102 @@ import Header from 'components/layouts/Header';
 import x from 'assets/svg/x.svg';
 import cartImg from 'assets/img/cart-img1.png';
 import './_cart.scss';
+import backIcon from 'assets/svg/back.svg';
+import closeIcon from 'assets/svg/times.svg';
+import bankIcon from 'assets/svg/bank.svg';
+import creditCardIcon from 'assets/svg/credit-card.svg';
+import paypalIcon from 'assets/svg/paypal.svg';
+
+// back.svg, close.svg, bank, credit-card, paypal
 
 interface CartProps {
 }
 export const Cart: React.FC<CartProps> = () => {
     return (<>
-        <Header />
+         <Header />
+         <div className="model">
+            <div className="popup">
+               
+                <div className="navigations">
+                    <div className="item back">
+                       <img src= {backIcon} alt="Back" />
+                    </div>
+                    <div className="item close">
+                     <img src= {closeIcon} alt="Close" />
+                    </div>
+                </div>
+                <div className="title">Make Payment</div>
+                 <div className="stages">
+                     <div className="items">
+                     <div className="item active">1</div>
+                    <div className="item deactive">2</div>
+                    <div className="item deactive">3</div>
+                     </div>
+                    
+                </div>
+
+                <div className="form">
+                    <div className="row">
+                        <div className="col">
+                            <input type="text"  placeholder = "First Name"/>
+                        </div>
+                        <div className="col">
+                            <input type="text"  placeholder = "Last Name"/>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col">
+                            <input type="text" placeholder = "Email Address"/>
+                        </div>
+                        <div className="col">
+                            <textarea name="" id=""  rows= {3} placeholder = "Address for delivery"></textarea>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        
+                        <div className="col payments">
+                        <div className="title">Select payment method</div>
+                            <div className="lists">
+                            <ul className = "selected">
+                                <li><img src= {creditCardIcon} alt="" /></li>
+                                <li className = "payment__name">Card Card or Debit</li>
+                                <li> <input type="radio" name = "payment_option"/></li>
+                            </ul>
+                            <ul>
+                                <li><img src= {paypalIcon} alt="" /></li>
+                                <li className = "payment__name">Card Card or Debit</li>
+                                <li> <input type="radio" name = "payment_option"/></li>
+                            </ul>
+                            <ul>
+                                <li><img src= {bankIcon} alt="" /></li>
+                                <li className = "payment__name">Card Card or Debit</li>
+                                <li> <input type="radio" name = "payment_option"/></li>
+                            </ul>
+                       
+                            </div>
+                           
+                        </div>
+
+                        <div className="col">
+                            <input type="text" placeholder = "Mobile Phone"/>
+                        </div>
+                    </div>
+ 
+                    <div className="row btn-pay">
+                        <button className = "btn btn--secondary">
+                            Go to Payment
+                        </button>
+                    </div>
+                
+                
+                </div>
+        
+            
+            </div>
+        </div>
+       
         <div className="main cart">
             <div className="hotdeals__bedcrumber">
                 <span>Home</span>
@@ -121,6 +211,8 @@ export const Cart: React.FC<CartProps> = () => {
             </div>
 
         </div>
+        
+        
         <Footer />
     </>);
 }

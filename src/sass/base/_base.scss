@@ -43,7 +43,8 @@ a {
 input::placeholder {
   font-family: "Montserrat", sans-serif;
 }
-input:focus {
+input:focus,
+textarea {
   outline: none;
 }
 
