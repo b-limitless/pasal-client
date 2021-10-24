@@ -1,0 +1,90 @@
+@import "../../../sass/base/function";
+@import "../../../sass/base/base";
+
+.main {
+  min-height: calc(100% - 700px);
+}
+
+.contact {
+  margin-top: $default-medium-mt;
+  max-width: pxToRem(1252.44);
+  margin-left: auto;
+  margin-right: auto;
+
+  .form {
+    .contact__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 2rem;
+    }
+  }
+  .row {
+    .col {
+      .row {
+        flex-direction: column;
+      }
+    }
+    .call-img {
+      background-color: #40bfff;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      
+
+      .contain {
+        img {
+          width: 100%;
+        }
+      }
+      .touch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #ffffff;
+        position:relative;
+        
+        
+        .ball {
+            position: absolute;
+            width: pxToRem(130);
+            height: pxToRem(130);
+            background-color: #40bfff;
+            border-radius: 50%;
+            right: -20px;
+            top: calc(50% - 65px);
+            z-index: 10;
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+            
+        }
+
+        .get-touch {
+          font-size: pxToRem(34);
+          font-weight: 600;
+          z-index: 12;
+        }
+        .lists {
+            z-index: 12;
+          ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            li {
+              font-weight: 500;
+              font-size: pxToRem(14);
+              line-height: pxToRem(16);
+            }
+          }
+        }
+      }
+    }
+    label {
+      display: block;
+    }
+  }
+}

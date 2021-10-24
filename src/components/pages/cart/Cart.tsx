@@ -1,14 +1,16 @@
 import React from 'react'
 import Footer from 'components/layouts/Footer';
 import Header from 'components/layouts/Header';
+import './_cart.scss';
 import x from 'assets/svg/x.svg';
 import cartImg from 'assets/img/cart-img1.png';
-import './_cart.scss';
 import backIcon from 'assets/svg/back.svg';
 import closeIcon from 'assets/svg/times.svg';
 import bankIcon from 'assets/svg/bank.svg';
 import creditCardIcon from 'assets/svg/credit-card.svg';
 import paypalIcon from 'assets/svg/paypal.svg';
+import creditCardImg from 'assets/img/credit-card.png';
+import completedIcon from 'assets/svg/completed.svg';
 
 // back.svg, close.svg, bank, credit-card, paypal
 
@@ -38,7 +40,7 @@ export const Cart: React.FC<CartProps> = () => {
                     
                 </div>
 
-                <div className="form">
+                {/* <div className="form" id = "step-1">
                     <div className="row">
                         <div className="col">
                             <input type="text"  placeholder = "First Name"/>
@@ -95,8 +97,69 @@ export const Cart: React.FC<CartProps> = () => {
                 
                 
                 </div>
-        
-            
+                 */}
+
+                 {/* <form className = "form" id = "step-2">
+                     <div className="row">
+                         <div className="col card__img">
+                            <img src= {creditCardImg} alt = ""/>
+                         </div>
+                         <div className="col">
+                             <div className="row">
+                                 <input type="text" placeholder = "Card Number"/>
+                             </div>
+                             <div className="row">
+                                 <div className="col">
+                                     <input type="text" placeholder = "Expiry"/>
+                                 </div>
+                                 <div className="col">
+                                     <input type="text" placeholder = "CVV"/>
+                                 </div>
+                             </div>
+
+                             <div className="row">
+                                 <input type="text" placeholder = "Holder Name"/>
+                             </div>
+                             <div className="row">
+                                 <div className="save__card">
+                                 <input type="checkbox" id = "save-card"/>
+                                 <label htmlFor="save-card">Save the credit card</label>
+                                 </div>
+                                
+                             </div>
+                         </div>
+                     </div>
+
+                     <div className="row btn-pay">
+                        <button className = "btn btn--secondary">
+                           Confirm
+                        </button>
+                    </div>
+                 </form>
+                  */}
+
+                  <form className="form" id = "step-3">
+                      <div className="row">
+                         <div className="done">
+                         <div className="completed">
+                            <img src= {completedIcon} alt="" />
+                          </div>
+                         </div>
+                          
+                      </div>
+                      <div className="row">
+                          <div className="success">Success</div>
+                          
+                      </div>
+                      <div className="row">
+                      <div className="row btn-pay">
+                        <button className = "btn btn--secondary">
+                           Complete
+                        </button>
+                    </div>
+                      </div>
+                  </form>
+
             </div>
         </div>
        
