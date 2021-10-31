@@ -18,6 +18,8 @@ const Navigation: React.FC<NavigationProps> = ({ children }) => {
             setCategoryChecked(false)
         }
     }
+
+    console.log(checkedList)
     return (
         <>
             <section className="navigation">
@@ -33,7 +35,7 @@ const Navigation: React.FC<NavigationProps> = ({ children }) => {
                     />
                     <div className="navigation__megamenu">
                         <ul className="megamenu">
-                            <li className="megamenu__item">
+                            <li className={`megamenu__item ${checkedList === 'sub-menu-1' ? 'rotate' : ''}`}>
                                 <label htmlFor="sub-menu-1">Electronic & Mobile</label>
                                 <input hidden
                                     checked={checkedList === 'sub-menu-1' ? true : false}
@@ -44,7 +46,7 @@ const Navigation: React.FC<NavigationProps> = ({ children }) => {
                                     <a href="#1"><li> Sub Item 2 </li></a>
                                 </ul>
                             </li>
-                            <li className="megamenu__item">
+                            <li className={`megamenu__item ${checkedList === 'sub-menu-2' ? 'rotate' : ''}`}>
                                 <label htmlFor="sub-menu-2">Beuty & Health</label>
                                 <input hidden
                                     checked={checkedList === 'sub-menu-2' ? true : false}
@@ -55,9 +57,11 @@ const Navigation: React.FC<NavigationProps> = ({ children }) => {
                                     <a href="#1"><li> Sub Item 4 </li></a>
                                 </ul>
                             </li>
-                            <li className="megamenu__item">
+                            <li className={`megamenu__item ${checkedList === 'sub-menu-3' ? 'rotate' : ''}`}>
                                 <label htmlFor="sub-menu-3">Computers</label>
-                                <input hidden type="radio" className="megamenu__checkbox" id="sub-menu-3" name="megamenu__radio" />
+                                <input
+                                    onChange={() => setCheckedLi('sub-menu-3')}
+                                    hidden type="radio" className="megamenu__checkbox" id="sub-menu-3" name="megamenu__radio"></input>
                                 <ul className="dropdown__submenu">
                                     <a href="#1"><li> Sub Item 5 </li></a>
                                     <a href="#1"><li> Sub Item 6 </li></a>

@@ -18,151 +18,151 @@ interface CartProps {
 }
 export const Cart: React.FC<CartProps> = () => {
     return (<>
-         <Header />
-         <div className="model">
+        <Header />
+        <div className="model">
             <div className="popup">
-               
+
                 <div className="navigations">
                     <div className="item back">
-                       <img src= {backIcon} alt="Back" />
+                        <img src={backIcon} alt="Back" />
                     </div>
                     <div className="item close">
-                     <img src= {closeIcon} alt="Close" />
+                        <img src={closeIcon} alt="Close" />
                     </div>
                 </div>
                 <div className="title">Make Payment</div>
-                 <div className="stages">
-                     <div className="items">
-                     <div className="item active">1</div>
-                    <div className="item deactive">2</div>
-                    <div className="item deactive">3</div>
-                     </div>
-                    
+                <div className="stages">
+                    <div className="items">
+                        <div className="item active">1</div>
+                        <div className="item deactive">2</div>
+                        <div className="item deactive">3</div>
+                    </div>
+
                 </div>
 
-                {/* <div className="form" id = "step-1">
+                <form className="form" id="step-1">
                     <div className="row">
                         <div className="col">
-                            <input type="text"  placeholder = "First Name"/>
+                            <input type="text" placeholder="First Name" />
                         </div>
                         <div className="col">
-                            <input type="text"  placeholder = "Last Name"/>
+                            <input type="text" placeholder="Last Name" />
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col">
-                            <input type="text" placeholder = "Email Address"/>
+                            <input type="text" placeholder="Email Address" />
                         </div>
                         <div className="col">
-                            <textarea name="" id=""  rows= {3} placeholder = "Address for delivery"></textarea>
+                            <textarea name="" id="" rows={3} placeholder="Address for delivery"></textarea>
                         </div>
                     </div>
 
                     <div className="row">
-                        
+
                         <div className="col payments">
-                        <div className="title">Select payment method</div>
+                            <div className="title">Select payment method</div>
                             <div className="lists">
-                            <ul className = "selected">
-                                <li><img src= {creditCardIcon} alt="" /></li>
-                                <li className = "payment__name">Card Card or Debit</li>
-                                <li> <input type="radio" name = "payment_option"/></li>
-                            </ul>
-                            <ul>
-                                <li><img src= {paypalIcon} alt="" /></li>
-                                <li className = "payment__name">Card Card or Debit</li>
-                                <li> <input type="radio" name = "payment_option"/></li>
-                            </ul>
-                            <ul>
-                                <li><img src= {bankIcon} alt="" /></li>
-                                <li className = "payment__name">Card Card or Debit</li>
-                                <li> <input type="radio" name = "payment_option"/></li>
-                            </ul>
-                       
+                                <ul className="selected">
+                                    <li><img src={creditCardIcon} alt="" /></li>
+                                    <li className="payment__name">Card Card or Debit</li>
+                                    <li> <input type="radio" name="payment_option" /></li>
+                                </ul>
+                                <ul>
+                                    <li><img src={paypalIcon} alt="" /></li>
+                                    <li className="payment__name">Card Card or Debit</li>
+                                    <li> <input type="radio" name="payment_option" /></li>
+                                </ul>
+                                <ul>
+                                    <li><img src={bankIcon} alt="" /></li>
+                                    <li className="payment__name">Card Card or Debit</li>
+                                    <li> <input type="radio" name="payment_option" /></li>
+                                </ul>
+
                             </div>
-                           
+
                         </div>
 
                         <div className="col">
-                            <input type="text" placeholder = "Mobile Phone"/>
+                            <input type="text" placeholder="Mobile Phone" />
                         </div>
                     </div>
- 
+
                     <div className="row btn-pay">
-                        <button className = "btn btn--secondary">
+                        <button className="btn btn--secondary">
                             Go to Payment
                         </button>
                     </div>
-                
-                
-                </div>
-                 */}
 
-                 {/* <form className = "form" id = "step-2">
-                     <div className="row">
-                         <div className="col card__img">
-                            <img src= {creditCardImg} alt = ""/>
-                         </div>
-                         <div className="col">
-                             <div className="row">
-                                 <input type="text" placeholder = "Card Number"/>
-                             </div>
-                             <div className="row">
-                                 <div className="col">
-                                     <input type="text" placeholder = "Expiry"/>
-                                 </div>
-                                 <div className="col">
-                                     <input type="text" placeholder = "CVV"/>
-                                 </div>
-                             </div>
 
-                             <div className="row">
-                                 <input type="text" placeholder = "Holder Name"/>
-                             </div>
-                             <div className="row">
-                                 <div className="save__card">
-                                 <input type="checkbox" id = "save-card"/>
-                                 <label htmlFor="save-card">Save the credit card</label>
-                                 </div>
-                                
-                             </div>
-                         </div>
-                     </div>
+                </form>
 
-                     <div className="row btn-pay">
-                        <button className = "btn btn--secondary">
-                           Confirm
+
+                {/* <form className="form" id="step-2">
+                    <div className="row">
+                        <div className="col card__img">
+                            <img src={creditCardImg} alt="" />
+                        </div>
+                        <div className="col">
+                            <div className="row">
+                                <input type="text" placeholder="Card Number" />
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <input type="text" placeholder="Expiry" />
+                                </div>
+                                <div className="col">
+                                    <input type="text" placeholder="CVV" />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <input type="text" placeholder="Holder Name" />
+                            </div>
+                            <div className="row">
+                                <div className="save__card">
+                                    <input type="checkbox" id="save-card" />
+                                    <label htmlFor="save-card">Save the credit card</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row btn-pay">
+                        <button className="btn btn--secondary">
+                            Confirm
                         </button>
                     </div>
-                 </form>
-                  */}
+                </form>
 
-                  <form className="form" id = "step-3">
-                      <div className="row">
-                         <div className="done">
-                         <div className="completed">
-                            <img src= {completedIcon} alt="" />
-                          </div>
-                         </div>
-                          
-                      </div>
-                      <div className="row">
-                          <div className="success">Success</div>
-                          
-                      </div>
-                      <div className="row">
-                      <div className="row btn-pay">
-                        <button className = "btn btn--secondary">
-                           Complete
-                        </button>
+
+                <form className="form" id="step-3">
+                    <div className="row">
+                        <div className="done">
+                            <div className="completed">
+                                <img src={completedIcon} alt="" />
+                            </div>
+                        </div>
+
                     </div>
-                      </div>
-                  </form>
+                    <div className="row">
+                        <div className="success">Success</div>
+
+                    </div>
+                    <div className="row">
+                        <div className="row btn-pay">
+                            <button className="btn btn--secondary">
+                                Complete
+                            </button>
+                        </div>
+                    </div>
+                </form> */}
 
             </div>
         </div>
-       
+
         <div className="main cart">
             <div className="hotdeals__bedcrumber">
                 <span>Home</span>
@@ -205,7 +205,7 @@ export const Cart: React.FC<CartProps> = () => {
                                 $345345
                             </div>
                         </div>
-                        
+
                         <div className="item">
 
                             <div className="col image">
@@ -238,10 +238,10 @@ export const Cart: React.FC<CartProps> = () => {
 
                 <div className="summary">
                     <div className="col vouchar">
-                    <div className="search">
-                        <input placeholder = "Voucher code" type="text" className="search__input" />
-                        <button className="search__btn">Redeem</button>
-                </div>
+                        <div className="search">
+                            <input placeholder="Voucher code" type="text" className="search__input" />
+                            <button className="search__btn">Redeem</button>
+                        </div>
                     </div>
                     <div className="col details__total">
                         <div className="row details">
@@ -274,8 +274,8 @@ export const Cart: React.FC<CartProps> = () => {
             </div>
 
         </div>
-        
-        
+
+
         <Footer />
     </>);
 }

@@ -27,14 +27,14 @@ const BestSeller: React.FC<BestSellerInterface> = ({title, tabs, children }) => 
             <div className="bestseller__ul">
                 <ul>
                     {tabs.map(tab =>
-                        <li className={`item item${tab.id} ${selectedList === `tab__item-${tab.id}` ? 'selected' : ''}`}
+                        <li key = {tab.id} className={`item item${tab.id} ${selectedList === `tab__item-${tab.id}` ? 'selected' : ''}`}
                             onClick={() => setSelectedList(`tab__item-${tab.id}`)}>
                             {tab.title}
                         </li>)}
                 </ul>
             </div>
             <div className="bestseller__tabcontent">
-                {tabs.map(tab => <div className={`tab__item ${selectedList === `tab__item-${tab.id}` ? 'show' : 'hide'}`} id={`tab__item-${tab.id}`}>{tab.content}</div>)}
+                {tabs.map(tab => <div key = {tab.id} className={`tab__item ${selectedList === `tab__item-${tab.id}` ? 'show' : 'hide'}`} id={`tab__item-${tab.id}`}>{tab.content}</div>)}
             </div>
             
             {children}
